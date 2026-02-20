@@ -1,0 +1,6 @@
+server:
+  host: 192.168.0.1
+  port: 8080
+db:
+  host: 10.0.0.1
+# note: missing db.user to trigger structural critical when comparing to uat

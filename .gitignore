@@ -1,0 +1,48 @@
+# Build outputs
+dist/
+bin/
+build/
+target/
+pkg/
+
+# Go
+*.exe
+*.test
+vendor/
+
+# Logs and temp files
+*.log
+*.tmp
+*.out
+
+# Environment files
+.env
+.env.*
+.env.local
+
+# IDEs and editors
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Node / JS
+node_modules/
+
+# Terraform, Gradle, coverage
+.terraform/
+.gradle/
+coverage/
+
+# Misc
+*.zip
+*.tar.gz
+
+# Project-specific local config (not for VCS)

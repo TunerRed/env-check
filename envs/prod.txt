@@ -1,0 +1,3 @@
+# prod environment allowed IPs
+192.168.0.1
+8.8.8.8
