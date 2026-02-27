@@ -60,7 +60,7 @@ func CheckGroups(groups map[string]map[string]string, baseline string, criticalE
                         if other == env {
                             continue
                         }
-                        if containsIP(ruleMap[other], ip) {
+                        if containsIP(ruleMap[other], ip) && !containsIP(ruleMap[env], ip) {
                             msg := fmt.Sprintf("CRITICAL: %s contains IP %s from %s rules", path, ip, other)
                             res.Criticals = append(res.Criticals, msg)
                             color.New(color.FgRed).Printf("  %s\n", msg)

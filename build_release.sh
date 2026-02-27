@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# go env -w GOPROXY=https://goproxy.cn,direct
+
 OUTDIR=dist
 mkdir -p "$OUTDIR"
 
