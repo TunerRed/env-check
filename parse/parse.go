@@ -164,7 +164,10 @@ func parseAndFlatten(path string) (map[string]struct{}, map[string]string) {
                 if line == "" || strings.HasPrefix(line, "#") {
                     continue
                 }
-                if idx := strings.Index(line, "="); idx > 0 {
+                // support both `key=value` and `key: value` syntaxes
+                // and make sure we only split on the first separator so values
+                // containing `=` (e.g. cluster:"a=1,b=2") are preserved intact.
+                if idx := strings.IndexAny(line, "=:"); idx > 0 {
                     k := strings.TrimSpace(line[:idx])
                     v := strings.TrimSpace(line[idx+1:])
                     flat[k] = v
